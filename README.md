@@ -12,13 +12,17 @@ This git repo mostly is for a new project to re-write a text-synesthesia colour 
 
 ----
 
-It turns out that what is technically termed "grapheme colour synesthesia" is somewhat common and has been studied. Here is some reseach about it I found from a quick Google:
+It turns out that what is technically termed "grapheme colour synesthesia" is somewhat common and has been studied. Here is some reseach about it (from a quick Google):
 
 https://www.researchgate.net/figure/273150268_Grapheme-Color-synesthesia-in-6588-participants-The-letter-color-pairings-across-the
 
-How interesting that my set of colour 'choices' resembles the average of the 6588 survey participants to some extent. However, some of the pairings (in the survey results) seem like very obvious matching of the first letter of colour names (B - blue; G - green; P - purple; R - red; Y - yellow).
+How interesting that my set of colour 'choices' resembles the average of the 6588 survey participants to some extent.
 
-But even accounting for this, I "agree" with the survey-result choices for letters: C - yellowish, K - orangish, L - yellowish, O - whiteish, S - yellowish, V - purpleish, W - purpleish.
+<img src="https://raw.githubusercontent.com/ralphbarton/text-synesthesia/master/src/img/Alphabet_colours_6588_survey.png" width="550"/>
+
+However, some of the pairings (in these survey results) seem like very obvious matching of the first letter of colour names (B - blue; G - green; P - purple; R - red; Y - yellow).
+
+But even accounting for this, I agree with the survey-result choices for letters: C - yellowish, K - orangish, L - yellowish, O - whiteish, S - yellowish, V - purpleish, W - purpleish.
 
 
 
