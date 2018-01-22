@@ -1,9 +1,29 @@
 # text-synesthesia
 
-This is a project to translate text, on the basis of each letter being represented by a colour.
+I have always had certain colour association for the letters of the alphabet. In something like 2006 I decided to document them on computer.
 
-The result is strips of colour, which could be read as writing.
+<img src="https://raw.githubusercontent.com/ralphbarton/text-synesthesia/master/src/img/Alphabet_colours.png" width="550"/>
 
+Around the same time, I put together a basic web-page to convert normal text into a representation using these colours.
+
+I rewrote it in something like 2010. This incarnation used batch-image processing on Adobe photoshop to create lots of small image fragments to make up the differently coloured 'letters'. It was otherwise again quite rudimentary in terms of the JavaScript programming. I have added a 'rescued' copy of this project into this reposiory, [here is the demo](http://ralphbarton.co.uk/hello).
+
+This git repo mostly is for a new project to re-write a text-synesthesia colour translator in React. Having worked in React for the last 6 months, a project like this should take about half a day!
+
+----
+
+It turns out that what is technically termed "grapheme colour synesthesia" is somewhat common and has been studied. Here is some reseach about it I found from a quick Google:
+
+https://www.researchgate.net/figure/273150268_Grapheme-Color-synesthesia-in-6588-participants-The-letter-color-pairings-across-the
+
+How interesting that my set of colour 'choices' resembles the average of the 6588 survey participants to some extent. However, some of the pairings (in the survey results) seem like very obvious matching of the first letter of colour names (B - blue; G - green; P - purple; R - red; Y - yellow).
+
+But even accounting for this, I "agree" with the survey-result choices for letters: C - yellowish, K - orangish, L - yellowish, O - whiteish, S - yellowish, V - purpleish, W - purpleish.
+
+
+
+
+(default readme file of Create React App projects below...)
 
 ---------
 
