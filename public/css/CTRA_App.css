@@ -1,0 +1,89 @@
+/* CTRA_App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #CCC;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    background: cyan;
+}
+
+.CTRA_App{
+    display: flex;
+    flex-flow: column nowrap;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+}
+
+.CTRA_App > .title{
+    font-size: 180%;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.CTRA_App > .title span{
+    opacity: 0.7;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 65%;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5em;
+}
+
+.controls div{
+    margin: 0 1em;
+}
+
+.text-container{
+    flex: 1 auto;
+    display: flex;
+    /*flex-flow: column*/
+}
+
+
+/* the blue-bordered box...*/
+.text-container > div,
+.text-container .title{
+    border-radius: 0.7em;
+    background-color: white;
+    border: 0.25em solid #008;
+}
+
+.text-container > div{
+    font-size: 160%;
+    width: 50%;
+    position: relative;
+    margin: 0.5em;
+}
+
+.text-container .title{
+    font-size: 70%;
+    padding: 0.2em 2em;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: -1.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #008;
+}
+
+.text-container .area-content{
+    font-size: 60%;
+}
+
+textarea{
+    width: 95%;
+    height: 20em;
+}
