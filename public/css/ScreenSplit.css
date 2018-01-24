@@ -1,0 +1,9 @@
+/* ScreenSplit.css */
+
+div.ScreenSplit{
+  height: 3.5em;
+}
+
+div.ScreenSplit img{
+  height: 100%;
+}

@@ -37,6 +37,7 @@ body {
 .controls{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-bottom: 0.5em;
 }
 
@@ -47,7 +48,11 @@ body {
 .text-container{
     flex: 1 auto;
     display: flex;
-    /*flex-flow: column*/
+    flex-flow: column nowrap;
+}
+
+.text-container.vSplit{
+    flex-flow: row nowrap;
 }
 
 
@@ -61,9 +66,17 @@ body {
 
 .text-container > div{
     font-size: 160%;
-    width: 50%;
+    flex: 1 auto;
     position: relative;
     margin: 0.5em;
+}
+
+.text-container:not(.vSplit) > div{
+        height: 50%;
+}
+
+.text-container.vSplit > div{
+        width: 50%;
 }
 
 .text-container .title{
@@ -81,9 +94,21 @@ body {
 
 .text-container .area-content{
     font-size: 60%;
+    height: 100%;
+    padding: 0 0.3em;
+    display: flex;
 }
 
 textarea{
-    width: 95%;
-    height: 20em;
+    flex: 1 auto;
+    resize: none;
+    border: none;
+    font-size: 140%;
+    background: transparent;
+    padding-top: 1.5em;
+}
+
+
+.colour-type{
+    padding-top: 1.5em;
 }
