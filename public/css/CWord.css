@@ -1,0 +1,89 @@
+/* CWord.css */
+
+svg {
+  background: #AAA;
+}
+
+svg rect{
+  stroke: black;
+  stroke-width: 2;
+}
+
+svg rect.A{
+  fill: #FFFF00;
+}
+svg rect.B{
+  fill: #0000FF;
+}
+svg rect.C{
+  fill: #FFC515;
+}
+svg rect.D{
+  fill: #008000;
+}
+svg rect.E{
+  fill: #00BFFF;
+}
+svg rect.F{
+  fill: #FE38E0;
+}
+svg rect.G{
+  fill: #FEAD92;
+}
+svg rect.H{
+  fill: #789816;
+}
+svg rect.I{
+  fill: #8080FF;
+}
+svg rect.J{
+  fill: #00CA65;
+}
+svg rect.K{
+  fill: #FF8A15;
+}
+svg rect.L{
+  fill: #A8FF15;
+}
+svg rect.M{
+  fill: #C25C76;
+}
+svg rect.N{
+  fill: #5A0101;
+}
+svg rect.O{
+  fill: #C2E7C2;
+}
+svg rect.P{
+  fill: #FF5015;
+}
+svg rect.Q{
+  fill: #FFCECE;
+}
+svg rect.R{
+  fill: #BF0030;
+}
+svg rect.S{
+  fill: #D7AD57;
+}
+svg rect.T{
+  fill: #705810;
+}
+svg rect.U{
+  fill: #0D6CFD;
+}
+svg rect.V{
+  fill: #CD92D3;
+}
+svg rect.W{
+  fill: #6A00D5;
+}
+svg rect.X{
+  fill: #C0C0C0;
+}
+svg rect.Y{
+  fill: #CCB500;
+}
+svg rect.Z{
+  fill: #9E8461;
+}

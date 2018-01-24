@@ -26,3 +26,22 @@ var codes = {
     Y: "#CCB500",
     Z: "#9E8461"
 };
+
+
+// use code below to generate CSS
+
+/*
+var s = "";
+for (var property in codes) {
+    if (codes.hasOwnProperty(property)) {
+
+	s += `svg rect.${property}{
+  fill: ${codes[property]};
+}\n`
+    }
+}
+
+console.log(s);
+*/
+
+export default codes;

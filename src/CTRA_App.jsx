@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ScreenSplit from './ScreenSplit';
+import CWord from './CWord';
 
 class CTRA_App extends Component {
 
@@ -63,9 +64,7 @@ class CTRA_App extends Component {
 		    <div className="colour-type">
 		    {this.state.text.split(" ").map( str=> {
 			return (
-			    <span>
-			      [{str}]
-			    </span>
+			    <CWord key={str} word={str}/>
 			);
 		    })}
 	    </div>
