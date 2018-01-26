@@ -34,16 +34,6 @@ body {
     font-size: 65%;
 }
 
-.controls{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 0.5em;
-}
-
-.controls div{
-    margin: 0 1em;
-}
 
 .text-container{
     flex: 1 auto;

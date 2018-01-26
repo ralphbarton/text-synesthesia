@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import imgHsplit   from './asset/splitscreen_H.png';
 import imgVsplit   from './asset/splitscreen_V.png';

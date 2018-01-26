@@ -1,0 +1,29 @@
+/* ControlsStrip.css */
+
+.ControlsStrip{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.ControlsStrip > div{
+    margin: 0 0.8em;
+}
+
+.ControlsStrip .name{
+    position: absolute;
+    padding-top: 0.5em;
+}
+
+
+.ControlsStrip div.Select{
+    display: inline-block;
+    width: 9em;
+    margin-left: 2.6em;
+}
+
+.ControlsStrip .font-size div.Select{
+    width: 6.3em;
+}
+

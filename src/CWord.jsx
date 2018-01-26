@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 //import * as d3 from "d3";
 import {select} from "d3-selection";
 import "d3-selection-multi";
 
-import synesColours from './synesColours';
+//import synesColours from './synesColours';
 
 
 class CWord extends React.PureComponent {
