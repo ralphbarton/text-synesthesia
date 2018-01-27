@@ -2,7 +2,7 @@
 
 A demo of the “Colour Translator” App is available [here](ralphbarton.co.uk/text-synesthesia).
 
-##About the Project
+## About the Project
 
 I’ve always associated a certain colour with each of the letters of the alphabet. In something like 2006 I decided to document them on computer.
 
@@ -14,7 +14,7 @@ I rewrote it in something like 2010. This incarnation used used a fancier ‘fon
 
 This git repo is for a 2018 rewrite of the Colour Translator. It’s a small program, and now that I know how to use [React](https://reactjs.org/) I can build a more advanced version of it quite quickly.
 
-##About Synesthesia
+## About Synesthesia
 
 It turns out that "grapheme colour synesthesia" is somewhat common and has been studied. Here are some webpages about it:
 
@@ -30,7 +30,10 @@ Some of the letter-colour pairings found in this survey are nothing more than ma
 
 But even accounting for this, I agree with the survey-result choices for letters: C - yellowish, K - orangish, L - yellowish, O - whiteish, S - yellowish, V - purpleish, W - purpleish.
 
-##Building the App in React
+## Building the App in React
 
-I have used [Create React App](https://github.com/facebookincubator/create-react-app) to provide a console-based development environment.
-I have also used [D3](https://d3js.org/) to help me programatically create SVG elements (one for each word).
+Libraries / tools used:
+
+[Create React App](https://github.com/facebookincubator/create-react-app) provide a console-based development environment for working in React.
+
+[D3](https://d3js.org/) is useful when programatically creating SVG elements.
