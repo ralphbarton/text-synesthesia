@@ -1,6 +1,6 @@
 # text-synesthesia
 
-A demo of the “Colour Translator” App is available [here](ralphbarton.co.uk/text-synesthesia).
+A demo of the “Colour Translator” App is available [here](http://www.ralphbarton.co.uk/text-synesthesia/index.html).
 
 ## About the Project
 
