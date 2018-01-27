@@ -10,30 +10,82 @@ import "d3-selection-multi";
 
 class CWord extends React.PureComponent {
 
+    charType(char){
+	const symbcode = char.charCodeAt(0);
+
+	// A capital
+	if((symbcode>=65)&&(symbcode<=90)){return 'A';}
+
+	// lower case letter
+	if((symbcode>=97)&&(symbcode<=122)){return 'c';}
+
+	return 'x';
+	
+    }
+
+
     svgDraw(){
 
+
+	const font = this.props.mainState.selectedFont.value;  // [0 - 5]
+	const size = this.props.mainState.selectedFSize.value; // [0 - 3]
+
+	const SVG = select(this.svg_el);
+	SVG.selectAll("*").remove();// clear the SVG of any previous stuff...
+	
+	// Calculate dimentions used to draw words
+	const M = [1,2,3,5][size]; //margin, in pixels. Also, stroke-width.
+	const rat_LU = 1.5; // upper-to-lower case size ratio
+	const rat_WH = 1.3; // width-to-height ratio
+	const Wl = [16, 24, 36, 60][size];
+	const Hl = Wl * rat_WH;
+	const Wu = Wl * rat_LU;
+	const Hu = Hl * rat_LU;
+
+	//code below runs once for each letter...
+	var x_cum = M;
 	[...this.props.word].forEach( (char, i)=>{
 
-	    //code below runs once for each letter...
-	    
-	    select(this.svg_el).append("rect")
-		.attrs({
-		    width: 20,
-		    height: 20,
-		    y: 0,
-		    x: 23*i,
-		    class: char.toUpperCase()
-		});	
+	    // what type of character is this one?
+	    const type = this.charType(char);
+	    if(type === 'x'){return;}
+	    const U = type === 'A';
 
+	    // determine lower or upper case width
+	    const w = U?Wu:Wl;
+	    const h = U?Hu:Hl;
+	    
+	    SVG.append("rect")
+		.attrs({
+		    y: M + (Hu-h),
+		    x: x_cum,
+		    width: w,
+		    height: h,
+		    class: char.toUpperCase()
+		})
+		.styles({
+		    "stroke-width": M
+		});
+
+	    // increment the width-counter
+	    x_cum += w;
 
 	});
 
+
+	//dimentions of the main SVG - set last
+	const width  = x_cum + M;
+	const height = Hu + 2*M;
+
+	SVG.attrs({width, height});
+
+	
     }
 
-    /*
+
     componentDidUpdate(){
-	this.svgDraw
-    }*/
+	this.svgDraw();
+    }
 
 
     componentDidMount(){
@@ -41,13 +93,10 @@ class CWord extends React.PureComponent {
     }
     
     render(){
-	const W = 30 * this.props.word.length;
-	const H = 30;
+
 	return (
 	    <svg
 	       className="CWord"
-	       width={W}
-	       height={H}
 	       ref={ (el) => {this.svg_el = el;}}
 	       />
 

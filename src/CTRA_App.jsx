@@ -72,9 +72,16 @@ class CTRA_App extends Component {
 
 		  <div className="area-content">
 		    <div className="colour-type">
-		    {this.state.text.split(" ").map( str=> {
+		      {this.state.text.split(" ").map( (str, index)=> {
 			return (
-			    <CWord key={str} word={str}/>
+			    [<CWord
+			       key={str}
+			       word={str}
+			       mainState={this.state}
+				    />,
+			     <span style={{fontSize: [32,48,72,120][this.state.selectedFSize.value]}}
+				className={"space-"}>&nbsp;</span>
+			    ]
 			);
 		    })}
 	    </div>
