@@ -1,7 +1,8 @@
 import React from 'react';
-//var _ = require('lodash');
 
 import * as spectrum from 'spectrum-colorpicker';// eslint-disable-line
+import '../node_modules/spectrum-colorpicker/spectrum.css'; // why is this necessary?
+
 import $ from "jquery";
 
 class BGrinsColourPick extends React.PureComponent {
@@ -29,7 +30,7 @@ class BGrinsColourPick extends React.PureComponent {
 	    showSelectionPalette: true, // "selectionPalette" retains some history of user's colour choices.
 	    showInitial: true, // show the original (starting) colour alongside the new one
 	    showButtons: false, //do not require OK and Cancel buttons
-	    preferredFormat: this.props.UI.ColStrFormat, // for the input box...
+//	    preferredFormat: this.props.UI.ColStrFormat, // for the input box...
 
 	    move: this.props.onChange
 	});
@@ -44,18 +45,16 @@ class BGrinsColourPick extends React.PureComponent {
 	const $bgrins = this.$el;
 
 	//change pref format
-	$bgrins.spectrum("option", "preferredFormat", this.props.UI.ColStrFormat ); // for the input box...
+	//	$bgrins.spectrum("option", "preferredFormat", this.props.UI.ColStrFormat ); // for the input box...
 
 	const col = $bgrins.spectrum("get");
 	$bgrins.spectrum("set", col);
     }
     
     render(){
-	const UI = this.props.UI;
 	return (
-	    <div className={"BGrinsColourPick BeigeWindow pickerWindow" + (UI.LargeSize ? " large" : "")}>
+	    <div className="BGrinsColourPick">
 	      <div className="BGrins-target-div" ref={ el => {this.pickerDiv = el;}}/>
-
 	      </div>
 	);
     }

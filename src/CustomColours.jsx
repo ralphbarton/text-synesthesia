@@ -1,7 +1,7 @@
 import React from 'react';
 import synesColours from './synesColours';
 
-//import BGrinsColourPick from './BGrinsColourPick';
+import BGrinsColourPick from './BGrinsColourPick';
 
 
 function CustomColours(props) {
@@ -24,7 +24,7 @@ function CustomColours(props) {
 		      <div key={elem.letter}>
 			<div className="L" style={{color: elem.colour}}>{elem.letter}</div>
 			<div>
-			  {/*<BGrinsColourPick />*/}
+			  <BGrinsColourPick />
 			</div>
 			<div className="a">reset</div>
 		      </div>
