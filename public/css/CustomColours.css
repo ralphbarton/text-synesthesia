@@ -1,17 +1,26 @@
 /* CustomColours.css */
 
-.CustomColours{
+.CustomColours .cards{
     display: flex;
     flex-flow: row wrap;
 }
 
-.CustomColours > div{
+.CustomColours .cards > div{
     padding: .3em 1em;
     margin: 0.5em;
     min-width: 12em;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    align-items: stretch;
+}
+
+.CustomColours .settings-container{
+    flex: 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .CustomColours .L{
@@ -22,8 +31,27 @@
     text-shadow: 0px 0px 5px black;
 }
 
+.CustomColours .col{
+    color: #888;
+}
+
 .CustomColours .a{
     text-decoration: underline;
     color: blue;
     font-size: 12px;
+    cursor: pointer;
+}
+
+.CustomColours .big{
+    margin-top: 0.5em;
+    margin-left: 2em;
+}
+
+.CustomColours .big,
+.CustomColours .big .a{
+    font-size: 18px;
+}
+
+.CustomColours .big .a{
+    display: inline-block;
 }

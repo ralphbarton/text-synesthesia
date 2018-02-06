@@ -24,7 +24,10 @@ class CTRA_App extends Component {
 	const vSplit = this.state.vSplit;
 
 	if(this.state.setColours){
-	    return <CustomColours />;
+	    return <CustomColours
+	    mainState={this.state}
+	    setMainState={this.setState.bind(this)}
+		/>;
 	}
 
 	return (

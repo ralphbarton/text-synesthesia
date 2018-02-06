@@ -50,7 +50,7 @@ body {
 /* the blue-bordered box...*/
 .text-container > div,
 .text-container .title,
-.CustomColours > div
+.CustomColours .cards > div
 {
     border-radius: 0.7em;
     background-color: white;
