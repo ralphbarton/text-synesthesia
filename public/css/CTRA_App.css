@@ -101,4 +101,6 @@ textarea{
 
 .colour-type{
     padding-top: 1.5em;
+    position: absolute;
+    width: 102.1%;
 }

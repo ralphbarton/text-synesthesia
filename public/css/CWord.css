@@ -10,7 +10,21 @@ svg rect{
   stroke: black;
 }
 
+.size-0 .CWord{
+  padding-right: 16px;
+}
 
+.size-1 .CWord{
+  padding-right: 24px;
+}
+
+.size-2 .CWord{
+  padding-right: 36px;
+}
+
+.size-3 .CWord{
+  padding-right: 60px;
+}
 
 
 /* All the colours below */

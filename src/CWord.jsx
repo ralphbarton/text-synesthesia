@@ -28,16 +28,15 @@ class CWord extends React.PureComponent {
 
 
 	const font = this.props.mainState.selectedFont.value;  // [0 - 5]
-	const size = this.props.mainState.selectedFSize.value; // [0 - 3]
 
 	const SVG = select(this.svg_el);
 	SVG.selectAll("*").remove();// clear the SVG of any previous stuff...
 	
 	// Calculate dimentions used to draw words
-	const M = [1,2,3,5][size]; //margin, in pixels. Also, stroke-width.
+	const M = 1; //margin, in pixels. Also, stroke-width.
 	const rat_LU = 1.5; // upper-to-lower case size ratio
 	const rat_WH = 1.3; // width-to-height ratio
-	const Wl = [16, 24, 36, 60][size];
+	const Wl = 16;
 	const Hl = Wl * rat_WH;
 	const Wu = Wl * rat_LU;
 	const Hu = Hl * rat_LU;
@@ -74,10 +73,14 @@ class CWord extends React.PureComponent {
 
 
 	//dimentions of the main SVG - set last
+	const size = this.props.mainState.selectedFSize.value; // [0 - 3]
+	const scale = [1, 1.5, 2.25, 3.75][size];
+	
 	const width  = x_cum + M;
 	const height = Hu + 2*M;
-
-	SVG.attrs({width, height});
+	const viewBox= `0 0 ${width} ${height}`;//this represents the coordate limits WITHIN the svg
+	
+	SVG.attrs({width: width*scale, height: height*scale, viewBox});
 
 	
     }
