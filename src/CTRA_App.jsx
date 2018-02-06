@@ -1,7 +1,5 @@
+/* eslint-disable jsx-a11y/href-no-hash */
 import React, { Component } from 'react';
-
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
 
 import ControlsStrip from './ControlsStrip';
 import CWord from './CWord';
@@ -23,13 +21,13 @@ class CTRA_App extends Component {
 	const vSplit = this.state.vSplit;
 
 	if(this.state.setColours){
-	return (
-	    <div className="CTRA_App">
-	      <a href="#"
-		 onClick={()=>{this.setState({setColours: false});}}
-		>save and return to Colour Translator</a>
-	    </div>
-	);
+	    return (
+		<div className="CTRA_App">
+		  <a href="#"
+		     onClick={()=>{this.setState({setColours: false});}}
+		    >save and return to Colour Translator</a>
+		</div>
+	    );
 	}
 
 	return (
@@ -72,15 +70,20 @@ class CTRA_App extends Component {
 
 		  <div className="area-content">
 		    <div className={"colour-type size-"+this.state.selectedFSize.value}>
-		      {this.state.text.split(" ").map( (str, index)=> {
-			return (
-			    <CWord
-			       key={`${str}-${index}`}
-			       word={str}
-			       mainState={this.state}
-			       />
-			);
-			  // <span className={"space-"}>&nbsp;&nbsp;</span>
+
+		      {this.state.text.split("\n").map( (para, j)=> {
+			  return ([
+			      para.split(/[^A-Za-z]/).map( (str, i)=> {
+				  return (
+				      <CWord
+					 key={`${str}-${j}-${i}`}
+					 word={str}
+					 mainState={this.state}
+					 />
+				  );
+			      }),
+			      <br key={j}/>
+			  ]);
 		      })}
 	    </div>
 		</div>	    

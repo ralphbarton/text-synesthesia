@@ -39,6 +39,8 @@ body {
     flex: 1 auto;
     display: flex;
     flex-flow: column nowrap;
+    overflow: hidden
+    
 }
 
 .text-container.vSplit{
@@ -59,6 +61,7 @@ body {
     flex: 1 auto;
     position: relative;
     margin: 0.5em;
+    margin-top: 0.6em;
 }
 
 .text-container:not(.vSplit) > div{

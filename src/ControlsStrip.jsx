@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+/* eslint-disable jsx-a11y/href-no-hash */
+import React from 'react';
 
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';

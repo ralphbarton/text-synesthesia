@@ -27,7 +27,7 @@ class CWord extends React.PureComponent {
     svgDraw(){
 
 
-	const font = this.props.mainState.selectedFont.value;  // [0 - 5]
+//	const font = this.props.mainState.selectedFont.value;  // [0 - 5]
 
 	const SVG = select(this.svg_el);
 	SVG.selectAll("*").remove();// clear the SVG of any previous stuff...
