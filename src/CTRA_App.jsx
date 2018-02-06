@@ -81,7 +81,9 @@ class CTRA_App extends Component {
 		  <div className="area-content">
 		    <div className={"colour-type size-"+this.state.selectedFSize.value}>
 
-		      {this.state.text.split("\n").map( (para, j)=> {
+		      {this.state.selectedFont.value === 1
+			  ?
+		       this.state.text.split("\n").map( (para, j)=> {
 			  return ([
 			      para.split(/[^A-Za-z]/).map( (str, i)=> {
 				  return (
@@ -94,7 +96,10 @@ class CTRA_App extends Component {
 			      }),
 			      <br key={j}/>
 			  ]);
-		      })}
+			      })
+			      :
+			      <span>the selected font is not available</span>
+			      }
 	    </div>
 		</div>	    
 		</div>

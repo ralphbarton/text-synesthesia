@@ -122,3 +122,14 @@ textarea{
     position: absolute;
     width: 102.1%;
 }
+
+.colour-type span{
+    background: #CCC;
+    padding: 0.2em 1em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.25em;
+    border: 2px solid red;
+}
