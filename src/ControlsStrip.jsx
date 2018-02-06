@@ -12,14 +12,23 @@ function ControlsStrip(props) {
     return (
 	<div className="ControlsStrip">
 
-	  {/* 1. SplitScreen Control */}
+	  {/* 1. Letter Colours Control */}
+	  {props.mainState.textHidden &&
+	  <div>
+	    <a href="#"
+	       onClick={()=>{props.setMainState({textHidden: false});}}>
+		  Text Entry</a>
+	  </div>
+	  }
+		  
+	  {/* 2. SplitScreen Control */}
 	  <ScreenSplit
 	     vSplit={vSplit}
 	     onClick={()=>{props.setMainState({vSplit: !vSplit});}}
 	    />
 
 
-	    {/* 2. Font Control */}		
+	    {/* 3. Font Control */}		
 	    <div className="font-type">
 	      <div className="name">Font:</div>
 	      <Select
@@ -40,7 +49,7 @@ function ControlsStrip(props) {
 		/>
 	    </div>
 
-	    {/* 3. Font Size Control */}		
+	    {/* 4. Font Size Control */}		
 	    <div className="font-size">
 	      <div className="name">Size:</div>
 	      <Select
@@ -59,6 +68,7 @@ function ControlsStrip(props) {
 		/>
 	    </div>
 
+	    {/* 5. Letter Colours Control */}
 	    <div>
 	      <a href="#"
 		 onClick={()=>{props.setMainState({setColours: true});}}		     

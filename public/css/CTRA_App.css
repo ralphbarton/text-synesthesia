@@ -85,6 +85,21 @@ body {
     color: #008;
 }
 
+.text-container .title:nth-child(2){
+    left: auto;
+    right: 0;
+    padding: 0.2em;
+    font-size: 63.5%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-container .title:nth-child(2):hover{
+    background: #416587;
+    color: #CCC;
+    border-color: black;
+}
+
 .text-container .area-content{
     font-size: 60%;
     height: 100%;

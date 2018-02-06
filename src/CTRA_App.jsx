@@ -10,6 +10,7 @@ class CTRA_App extends Component {
 	super();
 	this.state = {
 	    vSplit: true,
+	    textHidden: false,
 	    selectedFont: {value: 1},
 	    selectedFSize: {value: 0},
 	    setColours: false,
@@ -50,11 +51,19 @@ class CTRA_App extends Component {
 	      {/* 3. The 2 text panels */}
 	      <div className={"text-container" + (vSplit?" vSplit":"")}>	
 
+		{!this.state.textHidden &&
 		<div>
 		  <div className="title">
 		    English
 		  </div>
 
+		  <div className="title"
+		       onClick={()=>{this.setState({textHidden: true});}}
+		       >
+		    Hide
+		  </div>
+
+		  
 		  <div className="area-content">
 		    <textarea
 		       value={this.state.text}
@@ -62,7 +71,8 @@ class CTRA_App extends Component {
 		       />
 		  </div>	    
 		</div>
-
+		}
+			
 		<div>
 		  <div className="title">
 		    Colour-type
