@@ -22,11 +22,12 @@ function ControlsStrip(props) {
 	  }
 		  
 	  {/* 2. SplitScreen Control */}
+	  {!props.mainState.textHidden &&
 	  <ScreenSplit
 	     vSplit={vSplit}
 	     onClick={()=>{props.setMainState({vSplit: !vSplit});}}
 	    />
-
+	    }
 
 	    {/* 3. Font Control */}		
 	    <div className="font-type">
@@ -44,6 +45,8 @@ function ControlsStrip(props) {
 		    { value: 3, label: 'Arches' },
 		    { value: 4, label: 'Caterpillar' },
 		    { value: 5, label: 'Hexagonal' },
+		    { value: 6, label: 'Learn 1' },
+		    { value: 7, label: 'Learn 2' },
 		]}
 		clearable={false}
 		/>

@@ -14,7 +14,7 @@ class CTRA_App extends Component {
 	    textHidden: false,
 	    selectedFont: {value: 1},
 	    selectedFSize: {value: 0},
-	    setColours: true,//false, -- during development...
+	    setColours: false, //-- during development...
 	    text: "The quick brown fox jumps over the lazy dog.",
 	    overrideColours: {}
 	};
