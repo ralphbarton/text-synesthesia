@@ -10,7 +10,6 @@ body {
 #root{
     height: 100%;
     width: 100%;
-    background: cyan;
 }
 
 .CTRA_App{
@@ -50,7 +49,9 @@ body {
 
 /* the blue-bordered box...*/
 .text-container > div,
-.text-container .title{
+.text-container .title,
+.CustomColours > div
+{
     border-radius: 0.7em;
     background-color: white;
     border: 0.25em solid #008;

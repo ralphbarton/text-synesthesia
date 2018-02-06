@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 import ControlsStrip from './ControlsStrip';
+import CustomColours from './CustomColours';
 import CWord from './CWord';
 
 class CTRA_App extends Component {
@@ -13,8 +14,9 @@ class CTRA_App extends Component {
 	    textHidden: false,
 	    selectedFont: {value: 1},
 	    selectedFSize: {value: 0},
-	    setColours: false,
-	    text: "The quick brown fox jumps over the lazy dog."
+	    setColours: true,//false, -- during development...
+	    text: "The quick brown fox jumps over the lazy dog.",
+	    overrideColours: {}
 	};
     }
 
@@ -22,13 +24,7 @@ class CTRA_App extends Component {
 	const vSplit = this.state.vSplit;
 
 	if(this.state.setColours){
-	    return (
-		<div className="CTRA_App">
-		  <a href="#"
-		     onClick={()=>{this.setState({setColours: false});}}
-		    >save and return to Colour Translator</a>
-		</div>
-	    );
+	    return <CustomColours />;
 	}
 
 	return (

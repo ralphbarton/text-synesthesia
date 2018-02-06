@@ -1,0 +1,29 @@
+/* CustomColours.css */
+
+.CustomColours{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.CustomColours > div{
+    padding: .3em 1em;
+    margin: 0.5em;
+    min-width: 12em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.CustomColours .L{
+    font-size: 100px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0px 0px 5px black;
+}
+
+.CustomColours .a{
+    text-decoration: underline;
+    color: blue;
+    font-size: 12px;
+}
