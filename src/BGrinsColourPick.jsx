@@ -20,7 +20,7 @@ class BGrinsColourPick extends React.PureComponent {
 	    showInput: true, // allow text entry to specify colour
 	    preferredFormat: "hex",
 	    showInitial: true, // show the original (starting) colour alongside the new one
-	    change: this.props.onColourChangefunction
+	    change: this.props.onColourChange
 	});
 	
 /*
@@ -37,6 +37,10 @@ class BGrinsColourPick extends React.PureComponent {
 	});
 
  */
+    }
+
+    componentDidUpdate(){
+	this.$el.spectrum("set", this.props.color);
     }
 
     componentWillUnmount() {

@@ -15,6 +15,7 @@ function CustomColours(props) {
 	});
     }
 
+    console.log(">>", props.mainState.overrideColours);
     
     return (
 	<div className="CustomColours">
@@ -23,7 +24,10 @@ function CustomColours(props) {
 		  onClick={ () => {
 		      props.setMainState({setColours: false});
 	      }}>back</div>]
-	    [<div className="a">reset all</div>]
+	    [<div className="a"
+ 		  onClick={ () => {
+		      props.setMainState({overrideColours: {}});
+	      }}>reset all</div>]
 	  </div>
 	  <div className="cards">
 	    {
@@ -36,6 +40,7 @@ function CustomColours(props) {
 			    <BGrinsColourPick
 			       color={LetterColour}
 			       onColourChange={ (color) => {
+				   console.log("onColourChange", props.mainState.overrideColours, elem.letter);
 				   const hexCol = color.toHexString();
 				   props.setMainState({
 				       overrideColours: {
